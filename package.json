@@ -1,0 +1,42 @@
+{
+  "name": "tokamak-price-api",
+  "version": "1.0.0",
+  "description": "It's the price api to deliver token's market price through Coineko Paid Api",
+  "main": "index.js",
+  "dependencies": {
+    "@graphql-tools/schema": "^9.0.0",
+    "@types/coingecko-api": "^1.0.10",
+    "@types/mongoose": "^5.11.97",
+    "axios": "^0.27.2",
+    "dotenv": "^16.0.0",
+    "graphql": "^15.8.0",
+    "graphql-yoga": "^2.13.6",
+    "merge-graphql-schemas": "^1.7.8",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^3.12.0"
+  },
+  "devDependencies": {
+    "depcheck": "^1.4.3",
+    "nodemon": "^3.0.1",
+    "typescript": "^4.5.2"
+  },
+  "scripts": {
+    "build": "npx tsc --build",
+    "depcheck": "npx depcheck",
+    "start": "ts-node -r tsconfig-paths/register src/app.ts",
+    "dev": "nodemon --exec ts-node -r tsconfig-paths/register src/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tokamak-network/tokamak-price-api.git"
+  },
+  "keywords": [
+    "price-api"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tokamak-network/tokamak-price-api/issues"
+  },
+  "homepage": "https://github.com/tokamak-network/tokamak-price-api#readme"
+}

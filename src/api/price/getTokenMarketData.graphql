@@ -1,0 +1,3 @@
+type Query {
+  getTokenMarketData(tokenName: String): Token_Data!
+}

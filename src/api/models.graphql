@@ -1,0 +1,29 @@
+scalar Date
+scalar Object
+
+type Token_Data {
+  id: String
+  symbol: String
+  name: String
+  current_price: Float
+  market_cap: Float
+  market_cap_rank: Float
+  fully_diluted_valuation: Float
+  total_volume: Float
+  high_24h: Float
+  low_24h: Float
+  price_change_24h: Float
+  price_change_percentage_24h: Float
+  market_cap_change_24h: Float
+  market_cap_change_percentage_24h: Float
+  circulating_supply: Float
+  total_supply: Float
+  max_supply: Float
+  ath: Float
+  ath_change_percentage: Float
+  ath_date: String
+  atl: Float
+  atl_change_percentage: Float
+  atl_date: String
+  last_updated: String
+}
