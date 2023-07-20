@@ -5,6 +5,7 @@ type Token_Data {
   id: String
   symbol: String
   name: String
+  image: String
   current_price: Float
   market_cap: Float
   market_cap_rank: Float
