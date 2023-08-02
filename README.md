@@ -1,7 +1,7 @@
 # Tokamak-price-api
 It's the price api to deliver token's market price through Coineko paid Api
 
-### Build Setup
+# Build Setup
 ```
 # install dependencies
 npm install
@@ -13,7 +13,7 @@ npm run start
 npm run dev
 ```
 
-### How to use
+# How to use
 * gql playground: https://coingecko-api.tokamak.network/graphql
 
 #### Query Example
@@ -82,7 +82,7 @@ type Token_Data {
 }
 ```
 
-### Architecture
+# Architecture
 ```
 |- /src
   |- /api`           - GraphQL application
