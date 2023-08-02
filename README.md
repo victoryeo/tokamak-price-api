@@ -18,6 +18,7 @@ npm run dev
 
 #### Query Example
 * You can find market datas of a token with a tokenName which is a parameter.
+    * If you are in a trouble to find it with a token name, you might need to know how to find the api-id of each token [here](https://apiguide.coingecko.com/getting-started/10-min-tutorial-guide/1-get-data-by-id-or-address).
 
 ```
 query MyQuery {
