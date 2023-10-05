@@ -51,7 +51,7 @@ async function fetchSupportedTokenPrice(tokenName: SupportedTokenNames) {
       return { ...defaultTokenData, current_price: auraPrice.data };
     case "lyda":
       const lydaPrice = await axios.get(
-        "https://price-api.tokamak.network/auraprice"
+        "https://price-api.tokamak.network/lydaprice"
       );
       return { ...defaultTokenData, current_price: lydaPrice.data };
     default:
