@@ -36,22 +36,22 @@ async function fetchSupportedTokenPrice(tokenName: SupportedTokenNames) {
   switch (tokenName) {
     case "tonstarter":
       const tosPrice = await axios.get(
-        "https://price-api.tokamak.network/tosprice"
+        "https://price.api.tokamak.network/tosprice"
       );
       return { ...defaultTokenData, current_price: tosPrice.data };
     case "dooropen":
       const dooropenPrice = await axios.get(
-        "https://price-api.tokamak.network/docprice"
+        "https://price.api.tokamak.network/docprice"
       );
       return { ...defaultTokenData, current_price: dooropenPrice.data };
     case "aura":
       const auraPrice = await axios.get(
-        "https://price-api.tokamak.network/auraprice"
+        "https://price.api.tokamak.network/auraprice"
       );
       return { ...defaultTokenData, current_price: auraPrice.data };
     case "lyda":
       const lydaPrice = await axios.get(
-        "https://price-api.tokamak.network/lydaprice"
+        "https://price.api.tokamak.network/lydaprice"
       );
       return { ...defaultTokenData, current_price: lydaPrice.data };
     default:
