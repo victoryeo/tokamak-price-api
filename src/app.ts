@@ -1,28 +1,35 @@
-import { createServer } from "node:http";
+import express from "express";
+import helmet from "helmet";
 import { createYoga } from "graphql-yoga";
 import schema from "./schema";
 import "dotenv/config";
 
-const PORT = process.env.PORT_NUMBER || 4000;
-const options = {
-  port: PORT as number,
-  cors: {
-    origin: "*",
-    credentials: true,
-  },
-};
+const PORT = process.env.PORT_NUMBER ?? 4000;
 
-async function main() {
-  try {
-    const yoga = createYoga({ schema });
-    const server = createServer(yoga);
-    server.listen(PORT, () => {
-      console.log(`🚀Tokamak-price-api running on port ${PORT}⭐️`);
-    });
-  } catch (e) {
-    console.log("**Error happened to the server**");
-    console.log(e);
-  }
-}
+const app = express();
+const yoga = createYoga({ schema });
 
-main();
+const yogaRouter = express.Router();
+// GraphiQL specefic CSP configuration
+yogaRouter.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        'style-src': ["'self'", 'unpkg.com'],
+        'script-src': ["'self'", 'unpkg.com', "'unsafe-inline'"],
+        'img-src': ["'self'", 'raw.githubusercontent.com']
+      }
+    }
+  })
+);
+yogaRouter.use(yoga);
+
+app.use(yoga.graphqlEndpoint, yogaRouter) ;
+
+app.use(helmet());
+
+app.listen(PORT, () => {
+  console.log(`🚀Tokamak-price-api running on port ${PORT}⭐️`);
+});
+
+export default app;
