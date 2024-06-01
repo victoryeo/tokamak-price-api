@@ -12,7 +12,14 @@ npm run start
 # use nodemon in development to automatically reload the server on changes
 npm run dev
 ```
+# Test
+```
+# run the app
+npm run dev
 
+# execute the test cases
+npm test
+```
 # How to use
 * gql playground: https://coingecko-api.tokamak.network/graphql
 
@@ -90,4 +97,5 @@ type Token_Data {
   |- /coingecko-api  - general helpers with Coingecko-api  
   |- schema.ts       - make excutable schema to bind a model, types and resolvers below "/api"
   |- app.ts          - application main file
+|- /test             - test cases
 ```
