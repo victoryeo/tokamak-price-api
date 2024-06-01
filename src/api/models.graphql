@@ -1,6 +1,3 @@
-scalar Date
-scalar Object
-
 type Token_Data {
   id: String
   symbol: String
