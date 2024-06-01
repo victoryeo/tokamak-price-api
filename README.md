@@ -22,7 +22,7 @@ npm run dev
 
 ```
 query MyQuery {
-  getTokenMarketData(tokenName: "ethereum") {
+  getTokenMarketData(tokenName: "aura") {
     id
     ath
     ath_change_percentage
